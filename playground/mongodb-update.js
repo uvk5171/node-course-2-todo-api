@@ -12,14 +12,34 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',{ useNewUrlParser: true 
 	/*db.collection('Todos').deleteMany({text: 'Eat asd'}).then((result) => {
 		console.log(result);
 	});*/
-
-	/*db.collection('Todos').deleteOne({text: 'asd asd'}).then((result) => {
+	
+	/*db.collection('Todos').findOneAndUpdate({
+		_id: new ObjectID('5b866a1d0044c23f9849e6e4') 
+	}, {
+		$set: {
+			completed: false
+		}
+	}, {
+		returnOriginal: false
+	}).then((result) => {
 		console.log(result);
-	});*/
+	});
+	*/
 
-	/*db.collection('Todos').findOneAndDelete({completed: false}).then((result) => {
+	db.collection('Users').findOneAndUpdate({
+		_id: new ObjectID('5b878343a869ff311cf6fc98') 
+	}, {
+		$set: {
+			name: 'Uttara'
+		},
+		$inc: {
+			age: 15
+		}
+	}, {
+		returnOriginal: false
+	}).then((result) => {
 		console.log(result);
-	});*/
+	});
 
 	//client.close();
 });
