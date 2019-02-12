@@ -16,11 +16,11 @@ const {User} = require('./../server/models/user');
 //   console.log('Todos', todos);
 // });
 //
-// Todo.findOne({
-//   _id: id
-// }).then((todo) => {
-//   console.log('Todo', todo);
-// });
+Todo.findOne({
+  _id: id
+}).then((todo) => {
+  console.log('Todo', todo);
+});
 
 // Todo.findById(id).then((todo) => {
 //   if (!todo) {
