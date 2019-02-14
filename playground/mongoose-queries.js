@@ -16,11 +16,11 @@ const {User} = require('./../server/models/user');
 //   console.log('Todos', todos);
 // });
 //
-Todo.findOne({
-  _id: id
-}).then((todo) => {
-  console.log('Todo', todo);
-});
+// Todo.findOne({
+//   _id: id
+// }).then((todo) => {
+//   console.log('Todo', todo);
+// });
 
 // Todo.findById(id).then((todo) => {
 //   if (!todo) {
@@ -29,7 +29,7 @@ Todo.findOne({
 //   console.log('Todo By Id', todo);
 // }).catch((e) => console.log(e));
 
-User.findById('5b878199a4e1dd2220288c8e').then((user) => {
+User.findById('57bdb0fcdedf88540bfa2d66').then((user) => {
   if (!user) {
     return console.log('Unable to find user');
   }
